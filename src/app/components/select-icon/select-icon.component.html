@@ -1,0 +1,34 @@
+<ion-modal trigger="open-icons" #modal>
+  <ng-template>
+    <ion-header>
+      <ion-toolbar>
+        <ion-buttons slot="start">
+          <ion-button (click)="cancel(modal)">Voltar</ion-button>
+        </ion-buttons>
+        <ion-title>Escolha o ícone</ion-title>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content class="ion-padding">
+
+      <ion-list>
+        <ion-img src="../../../assets/addictions-icons/beer.svg"(click)="onSelectedIcon.emit('beer.svg'); cancel(modal)"></ion-img>
+        <ion-img src="../../../assets/addictions-icons/cake.svg"(click)="onSelectedIcon.emit('cake.svg'); cancel(modal)"></ion-img>
+        <ion-img src="../../../assets/addictions-icons/cannabis.svg"(click)="onSelectedIcon.emit('cannabis.svg'); cancel(modal)"></ion-img>
+        <ion-img src="../../../assets/addictions-icons/coffee.svg"(click)="onSelectedIcon.emit('coffee.svg'); cancel(modal)"></ion-img>
+        <ion-img src="../../../assets/addictions-icons/curse-words.svg"(click)="onSelectedIcon.emit('curse-words.svg'); cancel(modal)"></ion-img>
+        <ion-img src="../../../assets/addictions-icons/junkfood.svg"(click)="onSelectedIcon.emit('junkfood.svg'); cancel(modal)"></ion-img>
+        <ion-img src="../../../assets/addictions-icons/needle.svg"(click)="onSelectedIcon.emit('needle.svg'); cancel(modal)"></ion-img>
+        <ion-img src="../../../assets/addictions-icons/pills.svg"(click)="onSelectedIcon.emit('pills.svg'); cancel(modal)"></ion-img>
+        <ion-img src="../../../assets/addictions-icons/poker.svg"(click)="onSelectedIcon.emit('poker.svg'); cancel(modal)"></ion-img>
+        <ion-img src="../../../assets/addictions-icons/porn.svg"(click)="onSelectedIcon.emit('porn.svg'); cancel(modal)"></ion-img>
+        <ion-img src="../../../assets/addictions-icons/procrastination.svg"(click)="onSelectedIcon.emit('procrastination.svg'); cancel(modal)"></ion-img>
+        <ion-img src="../../../assets/addictions-icons/shopping.svg"(click)="onSelectedIcon.emit('shopping.svg'); cancel(modal)"></ion-img>
+        <ion-img src="../../../assets/addictions-icons/smoking.svg"(click)="onSelectedIcon.emit('smoking.svg'); cancel(modal)"></ion-img>
+        <ion-img src="../../../assets/addictions-icons/social-midias.svg"(click)="onSelectedIcon.emit('social-midias.svg'); cancel(modal)"></ion-img>
+        <ion-img src="../../../assets/addictions-icons/soda.svg"(click)="onSelectedIcon.emit('soda.svg'); cancel(modal)"></ion-img>
+        <ion-img src="../../../assets/addictions-icons/videogame.svg"(click)="onSelectedIcon.emit('videogame.svg'); cancel(modal)"></ion-img>
+      </ion-list>
+
+    </ion-content>
+  </ng-template>
+</ion-modal>

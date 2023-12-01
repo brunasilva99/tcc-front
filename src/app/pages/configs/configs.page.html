@@ -1,0 +1,10 @@
+<ion-content class="ion-padding">
+
+    <ion-list>
+        <app-config-card [isQuote]="true" [isButton]="true" image="meditation.svg"></app-config-card>
+        <app-config-card image="notification.svg" text="Notificações"></app-config-card>
+        <app-config-card image="dark-mode.svg" text="Modo noturno" [valueToggleButton]="darkMode" (onChangeConfig)="toggleDarkMode()"></app-config-card>
+        <app-config-card [showToggleButton]="false" [isButton]="true" image="feedback.svg" text="Enviar feedback" (click)="openMail()"></app-config-card>
+    </ion-list>
+
+</ion-content>

@@ -1,0 +1,24 @@
+ion-item {
+    --background: transparent;
+    --border-color: transparent;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    ion-fab-button {
+        --background: #e83c3c;
+        --background-activated: #b46060;
+    }
+
+    p {
+        margin-left: 10px;
+        color: #e83c3c;
+        font-weight: 550;
+    }
+
+    .next {
+        margin-left: 0;
+        margin-right: 10px;
+    }
+}

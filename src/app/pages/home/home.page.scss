@@ -1,0 +1,76 @@
+ion-content {
+    .empty-screen {
+        .drawing {
+            height: 45vh;
+            margin-bottom: 20px;
+    
+            gap: 10px;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            align-items: center;
+            
+            .cloud {
+                position: absolute;
+                animation: float 15s infinite;
+            }
+    
+            .cloud:nth-child(1) {
+                margin: 0 270px 230px 0;
+                animation: float 10s infinite 1s;
+            }
+    
+            .cloud:nth-child(2) {
+                margin: 0 0 155px 280px;
+            }
+    
+            .cloud:nth-child(3) {
+                margin: 200px 0 0 320px;
+                animation: float 10s infinite 1s;
+            }
+    
+            .cloud:nth-child(4) {
+                margin: 0 320px 70px 0;
+            }
+    
+            .sun {
+                animation: rotate 100s infinite;
+            }
+        }
+        p {
+            text-align: center;
+            color: #515151;
+            font-size: 18px;
+            font-weight: 700;
+        }
+    }
+    ion-list {
+        background-color: transparent;
+
+        gap: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(10px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}

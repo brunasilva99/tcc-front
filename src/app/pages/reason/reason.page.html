@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-toolbar>
+    <app-navigate-buttons action="back" (onSelected)="backPage()"></app-navigate-buttons>
+    <ion-icon id="addReason" slot="end" name="add"></ion-icon>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  
+  <h3 class="title">Meus motivos</h3>
+
+  <ion-list>
+    <app-reason-card *ngFor="let reason of reasons" [text]="reason.texto" [id]="reason.id" (onDelete)="load()" (onEdit)="load()"></app-reason-card>
+  </ion-list>
+
+</ion-content>
+
+<ion-alert
+  trigger="addReason"
+  header="Novo motivo"
+  [buttons]="alertButtons"
+  [inputs]="alertInputs"
+></ion-alert>

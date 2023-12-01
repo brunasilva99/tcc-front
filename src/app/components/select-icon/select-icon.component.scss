@@ -1,0 +1,29 @@
+ion-modal {
+    ion-toolbar {
+        --background: #F2F2F2;
+        --border-color: #F2F2F2;
+        color: #E26D6D;
+
+        ion-buttons {
+            ion-button {
+                --color: #bd5858;
+            }
+        }
+    }
+    ion-content {
+        ion-list {
+            width: 100%;
+            background-color: transparent;
+            
+            gap: 100px;
+            flex-wrap: wrap;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            ion-img {
+                width: 30%;
+            }
+        }
+    }
+}

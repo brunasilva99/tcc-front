@@ -1,0 +1,15 @@
+:host {
+
+    ion-tabs {
+      --background: var(--background-two);
+    }
+
+    ion-tab-bar {
+      --background: var(--background-two);
+    }
+
+    ion-tab-button {
+        --color: #bd2f2f;
+        --color-selected: #ff0000;
+    }
+}

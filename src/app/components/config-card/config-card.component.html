@@ -1,0 +1,27 @@
+<ion-card *ngIf="!isQuote" [attr.button]="isButton">
+  <ion-card-content class="cardNotQuote">
+    <div class="start">
+      <ion-img src="../../../assets/config-icons/{{image}}"></ion-img>
+      <p>{{text}}</p>
+    </div>
+    <ion-toggle
+     *ngIf="showToggleButton"
+     slot="end"
+     mode="ios"
+     (ionChange)="onChangeConfig.emit()"
+     [ngModel]="valueToggleButton">
+    </ion-toggle>
+  </ion-card-content>
+</ion-card>
+
+<ion-card *ngIf="isQuote" [attr.button]="isButton" (click)="onChangeQuote()">
+  <ion-card-content class="cardQuote">
+    <div class="start">
+      <ion-img src="../../../assets/config-icons/{{image}}"></ion-img>
+      <div>
+        <p>{{randomQuote.text}}</p>
+        <p><strong>{{randomQuote.author}}</strong></p>
+      </div>
+    </div>
+  </ion-card-content>
+</ion-card>

@@ -1,0 +1,14 @@
+<ion-content class="ion-padding">
+
+    <ion-header>
+        <ion-img src="../../../assets/svg-icons/liberty.svg"></ion-img>
+        <h5>Qual o vício / hábito que você pretende superar?</h5>
+        <hr>
+    </ion-header>
+
+    <ion-list>
+        <app-addiction-card *ngFor="let habit of standardsHabits" [name]="habit.nome" [image]="habit.icone" (click)="openCreatePage(habit)"></app-addiction-card>
+        <app-addiction-card name="Outro" image="other.svg" (click)="openCreatePage({nome: 'Outro', icone: 'other.svg'})"></app-addiction-card>
+    </ion-list>
+
+</ion-content>

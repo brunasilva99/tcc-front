@@ -1,0 +1,7 @@
+{
+  "name": "tcc-bruna",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

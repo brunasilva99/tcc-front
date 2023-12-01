@@ -1,0 +1,16 @@
+<ion-backdrop [visible]="true"></ion-backdrop>
+<div id="box">
+
+  <ion-datetime
+   #datetime
+   [(ngModel)]="dateTime"
+   locale="pt-BR"
+   [max]="dateNow.toJSON().slice(0, 10)">
+   <span slot="time-label">Horário</span>
+   <ion-buttons slot="buttons">
+    <ion-button color="danger" (click)="cancel()">Cancelar</ion-button>
+    <ion-button color="primary" (click)="confirm(datetime)">Confirmar</ion-button>
+  </ion-buttons>
+  </ion-datetime>
+
+</div>

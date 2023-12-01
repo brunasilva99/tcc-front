@@ -1,0 +1,32 @@
+ion-content {
+
+    ion-header {
+        ion-title {
+            margin-left: 10px;
+        }
+    }
+
+    ion-card {
+        --background: #fff;
+        padding: 18px 24px;
+        margin: 12px 0;
+        .align {
+            width: 100%;
+
+            gap: 20px;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+
+            ion-img {
+                width: 40px;
+            }
+
+            p {
+                color: #515151;
+                font-size: 18px;
+                font-weight: 500;
+            }
+        }
+    }
+}

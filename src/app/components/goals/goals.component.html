@@ -1,0 +1,24 @@
+<ion-modal trigger="open-goals" #modal>
+  <ng-template>
+    <ion-header>
+      <ion-toolbar>
+        <ion-buttons slot="start">
+          <ion-button (click)="cancel(modal)">Voltar</ion-button>
+        </ion-buttons>
+        <ion-title>Metas atingidas</ion-title>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content class="ion-padding">
+
+      <ion-card button *ngFor="let days of [1, 2, 5, 7, 15, 30, 50, 80, 100, 150, 200, 300]">
+        <div class="align">
+          <ion-img *ngIf="daysAbs() >= days" src="../../../assets/svg-icons/trophy-active.svg"></ion-img>
+          <ion-img *ngIf="daysAbs() < days" src="../../../assets/svg-icons/trophy-locked.svg"></ion-img>
+          <p *ngIf="daysAbs() >= days">{{days}} dias</p>
+          <p *ngIf="daysAbs() < days" class="locked">{{days}} dias</p>
+        </div>
+      </ion-card>
+
+    </ion-content>
+  </ng-template>
+</ion-modal>

@@ -1,0 +1,22 @@
+<ion-content>
+  
+    <!-- Desenho para caso o usuário não tenha vícios cadastrados -->
+    <div class="empty-screen" *ngIf="habits.length === 0">
+        <div class="drawing">
+            <ion-img class="cloud" src="../../../assets/svg-icons/home-cloud.svg"></ion-img>
+            <ion-img class="cloud" src="../../../assets/svg-icons/home-cloud.svg"></ion-img>
+            <ion-img class="cloud" src="../../../assets/svg-icons/home-cloud.svg"></ion-img>
+            <ion-img class="cloud" src="../../../assets/svg-icons/home-cloud.svg"></ion-img>
+            <ion-img class="sun" src="../../../assets/svg-icons/home-sun.svg"></ion-img>
+            <ion-img class="face" src="../../../assets/svg-icons/home-face.svg"></ion-img>
+        </div>
+        <p>Nunca é tarde para se libertar.</p>
+        <p>Comece o seu processo de autocontrole agora mesmo.</p>
+    </div>
+
+    <!-- Lista de vícios do usuário -->
+    <ion-list class="ion-padding">
+        <app-home-cards *ngFor="let habit of habits" [name]="habit.nome" [image]="habit.icone" [abstinenceDate]="habit.data_abs" (click)="viewHabit(habit)"></app-home-cards>
+    </ion-list>
+
+</ion-content>

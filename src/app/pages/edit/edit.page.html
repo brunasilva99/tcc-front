@@ -1,0 +1,41 @@
+<ion-content class="ion-padding">
+
+  <ion-header>
+      <app-navigate-buttons action="back" (onSelected)="onBack()"></app-navigate-buttons>
+      <ion-title>Editar hábito</ion-title>
+  </ion-header>
+
+  <!-- Data e hora -->
+  <ion-card button (click)="showCalendar = true">
+    <div class="align">
+      <ion-img src="../../../assets/svg-icons/calendar.svg"></ion-img>
+      <p>Data e hora de início</p>
+    </div>
+  </ion-card>
+
+  <!-- Nome -->
+  <ion-card button id="change-name">
+    <div class="align">
+      <ion-img src="../../../assets/svg-icons/pencil.svg"></ion-img>
+      <p>Nome do vício/hábito</p>
+    </div>
+  </ion-card>
+
+  <!-- Ícone -->
+  <ion-card button id="open-icons">
+    <div class="align">
+      <ion-img src="../../../assets/addictions-icons/{{habit.icone}}"></ion-img>
+      <p>Ícone</p>
+    </div>
+  </ion-card>
+
+</ion-content>
+
+<app-select-icon (onSelectedIcon)="updateIcon($event)"></app-select-icon>
+<app-datetime-picker *ngIf="showCalendar" (onConfirm)="setDate($event)" (onCancel)="showCalendar = false"></app-datetime-picker>
+<ion-alert
+  trigger="change-name"
+  header="Insira o nome nome"
+  [buttons]="alertButtons"
+  [inputs]="alertInputs"
+></ion-alert>

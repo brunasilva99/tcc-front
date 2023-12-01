@@ -1,0 +1,18 @@
+<ion-card button>
+  <ion-card-header>
+    <ion-card-title>
+      <ion-icon id="editReason" name="create-outline"></ion-icon>
+      <ion-icon (click)="deleteReason()" name="trash-outline"></ion-icon>
+    </ion-card-title>
+  </ion-card-header>
+  <ion-card-content>
+    <p>{{text}}</p>
+  </ion-card-content>
+</ion-card>
+
+<ion-alert
+  trigger="editReason"
+  header="Editar motivo"
+  [buttons]="alertButtons"
+  [inputs]="alertInputs"
+></ion-alert>

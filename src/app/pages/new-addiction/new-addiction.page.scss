@@ -1,0 +1,36 @@
+ion-content {
+  --background: var(--red-two);
+}
+
+ion-header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    ion-img {
+        width: 100px;
+    }
+
+    h5 {
+        color: #fcfcfc;
+        text-align: center;
+        font-size: 23px;
+        font-weight: 700;
+    }
+
+    hr {
+        width: 80%;
+        background-color: var(--background-tree);
+        margin-top: 10px;
+    }
+}
+
+ion-list {
+    margin-top: 40px;
+    background: transparent;
+
+    gap: 20px;
+    display: flex;
+    flex-direction: column;
+}

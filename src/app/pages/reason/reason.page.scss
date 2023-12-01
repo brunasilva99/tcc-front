@@ -1,0 +1,26 @@
+ion-header {
+    ion-toolbar {
+        padding: 6px 16px;
+        --background: var(--background-two);
+        --border-color: var(--background-two);
+        ion-icon {
+            color: #e83c3c;
+            font-size: 30px;
+        }
+    }
+}
+
+.title {
+    width: 100%;
+    text-align: center;
+    color: #e83c3c;
+    font-weight: 600;
+}
+
+ion-list {
+    --background-color: transparent;
+    background-color: transparent;
+    gap: 20px;
+    display: flex;
+    flex-direction: column;
+}

@@ -1,0 +1,94 @@
+<ion-content class="ion-padding">
+  
+  <ion-header>
+    <app-navigate-buttons action="back" (onSelected)="onBack()"></app-navigate-buttons>
+  </ion-header>
+
+  <ion-list>
+    
+    <!-- Principal -->
+    <ion-card>
+      <p>Estou livre de</p>
+      <p><span>{{habit.nome}}</span></p>
+      <p>há:</p>
+      <div class="align">
+        <div class="circle">
+          <p><span>{{totalTime().number}}<br>{{totalTime().unit}}</span></p>
+        </div>
+      </div>
+    </ion-card>
+
+    <!-- Tempo de abstinencia -->
+    <ion-card>
+      <p><span>Tempo de abstinência</span></p>
+      <p>{{formatElapsedTime(findMostRecentDate())}}</p>
+    </ion-card>
+
+    <!-- Proxima meta -->
+    <ion-card>
+      <p><span>Próxima meta a ser atingida</span></p>
+      <p>{{timeForNextGoal()}}</p>
+    </ion-card>
+
+    <!-- Livre des -->
+    <ion-card>
+      <p><span>Estou livre desde</span></p>
+      <p>{{lastDate()}}</p>
+    </ion-card>
+
+    <!-- Metas -->
+    <ion-card class="button" id="open-goals" button>
+      <div class="align">
+        <ion-img src="../../../assets/svg-icons/trophie.svg"></ion-img>
+        <p>Metas atingidas</p>
+      </div>
+    </ion-card>
+
+    <!-- Calendario -->
+    <div class="protect"></div>
+    <ion-datetime display-format="DD.MM.YYYY HH:mm" presentation="date" [multiple]="true" [highlightedDates]="relapsesCalendar"></ion-datetime>
+
+    <!-- Motivos -->
+    <ion-card class="button changeColor reasons" button (click)="viewReasons()">
+      <ion-card-header>
+        <ion-card-title>Meus motivos</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <div class="container">
+          {{lastReasonText}}
+        </div>
+        <ion-button expand="block">
+          Visualizar motivo
+        </ion-button>
+      </ion-card-content>
+    </ion-card>
+
+    <!-- Registrar recaida -->
+    <ion-card class="button changeColor" button (click)="restartTimer()">
+      <div class="align">
+        <ion-img src="../../../assets/svg-icons/clock.svg"></ion-img>
+        <p>Reiniciar contagem</p>
+      </div>
+    </ion-card>
+
+    <!-- Editar -->
+    <ion-card class="button" button (click)="openEdit()">
+      <div class="align">
+        <ion-img src="../../../assets/svg-icons/diary.svg"></ion-img>
+        <p>Editar</p>
+      </div>
+    </ion-card>
+
+    <!-- Excluir -->
+    <ion-card class="button changeColor" button (click)="deleteHabit()">
+      <div class="align">
+        <ion-img src="../../../assets/svg-icons/trash.svg"></ion-img>
+        <p>Excluir Vício/Hábito</p>
+      </div>
+    </ion-card>
+
+  </ion-list>
+
+</ion-content>
+
+<app-goals [timeAbs]="habit.data_abs"></app-goals>

@@ -1,0 +1,24 @@
+ion-card {
+    --background: var(--background-two);
+    ion-card-header {
+        ion-card-title {
+            padding: 6px;
+            gap: 16px;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            ion-icon {
+                color: #c22727;
+            }
+        }
+    }
+    ion-card-content {
+        p {
+            width: 100%;
+            text-align: center;
+            color: var(--color-text);
+            font-weight: 600;
+            font-size: 18px;
+        }
+    }
+}

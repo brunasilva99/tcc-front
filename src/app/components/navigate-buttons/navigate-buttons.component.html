@@ -1,0 +1,13 @@
+<ion-item *ngIf="action === 'back'">
+  <ion-fab-button size="small" (click)="onSelected.emit()">
+    <ion-icon name="chevron-back"></ion-icon>
+  </ion-fab-button>
+  <p>Voltar</p>
+</ion-item>
+
+<ion-item *ngIf="action === 'next'">
+  <p class="next">Próximo</p>
+  <ion-fab-button size="small" (click)="onSelected.emit()">
+    <ion-icon name="chevron-forward"></ion-icon>
+  </ion-fab-button>
+</ion-item>

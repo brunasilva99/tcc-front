@@ -1,0 +1,72 @@
+ion-card {
+  --background: var(--background-two);
+
+    ion-card-content.cardNotQuote {
+        gap: 30px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .start {
+            gap: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        ion-img {
+            width: 40px;
+        }
+
+        p {
+            font-size: 20px;
+            font-weight: 700;
+            color: #C22727;
+        }
+
+        ion-toggle::part(track) {
+            background: var(--background-grey);
+            /* Required for iOS handle to overflow the height of the track */
+            overflow: visible;
+        }
+
+        ion-toggle.toggle-checked::part(track) {
+            background: #c22727;
+            /* Required for iOS handle to overflow the height of the track */
+            overflow: visible;
+        }
+
+        ion-toggle::part(handle) {
+            background: #f1f1f1;
+            box-shadow: none;
+        }
+
+    }
+
+    ion-card-content.cardQuote {
+      background: #C22727;
+      min-height: 160px;
+      gap: 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      .start {
+          gap: 20px;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+      }
+
+      ion-img {
+          min-width: 49px;
+      }
+
+      p {
+          font-size: 17px;
+          font-weight: 500;
+          color: #eaeaea;
+      }
+
+  }
+}

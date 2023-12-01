@@ -1,0 +1,57 @@
+<ion-content class="ion-padding ion-content-wrapper">
+
+  <ion-header>
+    <app-navigate-buttons action="back" (onSelected)="onBack()"></app-navigate-buttons>
+  </ion-header>  
+
+  <div class="container" *ngIf="screen === 'name'">
+
+    <p>Parabéns,<br>o primeiro passo é decidir começar</p>
+    <ion-img [src]="'../../../assets/addictions-icons/'+habit.icone" id="open-icons"></ion-img>
+    <p>Digite o nome do seu vício/hábito:</p>
+
+    <ion-item>
+      <ion-input [(ngModel)]="habit.nome" placeholder="Nome do hábito"></ion-input>
+    </ion-item>
+
+  </div>
+
+  <div class="container" *ngIf="screen === 'date'">
+
+    <ion-img src="../../../assets/svg-icons/brain.svg"></ion-img>
+    <p>Quando foi a última vez que isso aconteceu?</p>
+
+    <ion-button (click)="showCalendar = true">
+      {{selectedDate === undefined ? 'Selecione a data' : formateDateTime(selectedDate)}}
+    </ion-button>
+
+  </div>
+
+  <div class="container reason" *ngIf="screen === 'reason'">
+
+    <p>Meu motivo para abondonar este vício é</p>
+    <ion-img src="../../../assets/svg-icons/notes.svg"></ion-img>
+
+    <ion-item>
+      <ion-textarea
+        [(ngModel)]="reason"
+        placeholder="Tente pensar nos pontos positivos que isso pode trazer a sua vida"
+        [autoGrow]="true"
+      >
+      </ion-textarea>
+    </ion-item>
+
+    <ion-button (click)="saveHabit()">
+      Salvar
+    </ion-button>
+
+  </div>
+
+  <ion-footer *ngIf="screen !== 'reason'">
+    <app-navigate-buttons action="next" (onSelected)="onNext()"></app-navigate-buttons>
+  </ion-footer>
+
+</ion-content>
+
+<app-select-icon (onSelectedIcon)="habit.icone = $event;"></app-select-icon>
+<app-datetime-picker *ngIf="showCalendar" (onConfirm)="onConfirmDate($event)" (onCancel)="onCancelDate()"></app-datetime-picker>

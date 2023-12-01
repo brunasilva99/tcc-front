@@ -1,0 +1,42 @@
+ion-modal {
+    ion-toolbar {
+        --background: var(--background-two);
+        --border-color: var(--background-two);
+        color: #e83c3c;
+
+        ion-buttons {
+            ion-button {
+                --color: #bd5858;
+            }
+        }
+    }
+    ion-content {
+        ion-card {
+            --background: var(--background-two);
+            padding: 18px 24px;
+            margin: 12px 0;
+            .align {
+                width: 100%;
+
+                gap: 20px;
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+
+                ion-img {
+                    width: 40px;
+                }
+
+                p {
+                    color: #C22727;
+                    font-size: 18px;
+                    font-weight: 500;
+                }
+
+                .locked {
+                    color: var(--color-text);
+                }
+            }
+        }
+    }
+}
